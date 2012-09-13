@@ -1,0 +1,52 @@
+
+.input_box
+{
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: thin;
+    padding: 4px;
+    width: 225px;
+    height: 20px;
+}
+
+div.form
+{
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #888888;
+    display:block;
+    background-color: white;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: thin;
+    /*set the div in the center of the screen*/
+    position:absolute;
+    top:25%;
+    left:25%;
+    
+    color:#F09;
+    width: 400px;
+}
+
+.close
+{
+    float:right;
+    margin-right: 10px;
+    display:table;
+    clear:both;
+}
+
+table.main_table tr:nth-child(even) {
+    background-color: lightblue;
+}
+
+.footer {
+   float:right;
+   top:20px;
+   right:20px;
+}
+
+th a 
+{
+    color:#FF0099; 
+}
