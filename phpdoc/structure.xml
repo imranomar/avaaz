@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a10" title="">
+  <file path="config.php" hash="c2bde0dd7f98e031c16252089386be29" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file config.php</error>
+    </parse_markers>
+  </file>
+  <file path="classes/avaaz_mysql_db.php" hash="3740695fda5e6b164d1f40e5bb272c78" package="Default">
+    <include line="6" type="Include Once" package="Default">
+      <name>person.php</name>
+      <docblock line="2">
+        <description><![CDATA[avaaz_mysql_db.php]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="20" package="Default">
+      <extends/>
+      <name>avaaz_mysql_db</name>
+      <full_name>\avaaz_mysql_db</full_name>
+      <docblock line="8">
+        <description><![CDATA[avaaz_mysql_db]]></description>
+        <long-description><![CDATA[<p>This class interacts with the mysql database.</p>]]></long-description>
+        <tag line="8" name="author" description="Imran Bukhsh &lt;imranomar@gmail.com&gt;"/>
+        <tag line="8" name="since" description="1.0"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="27" namespace="global" package="Default">
+        <name>$fields</name>
+        <default><![CDATA[array('first_name', 'last_name', 'country', 'city', 'address', 'email')]]></default>
+        <docblock line="22">
+          <description><![CDATA[used to validate $sort variable.]]></description>
+          <long-description><![CDATA[<p>contains list of all sortable field</p>]]></long-description>
+          <tag line="22" name="access" description="private"/>
+          <tag line="22" name="var" description="" type="string[]">
+            <type by_reference="false">string[]</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="33" namespace="global" package="Default">
+        <name>$connection_string</name>
+        <default><![CDATA[]]></default>
+        <docblock line="28">
+          <description><![CDATA[connection string to the database for use of pdo]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="28" name="access" description="private"/>
+          <tag line="28" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="39" namespace="global" package="Default">
+        <name>$user_name</name>
+        <default><![CDATA[]]></default>
+        <docblock line="34">
+          <description><![CDATA[user name of database for use of pdo]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="34" name="access" description="private"/>
+          <tag line="34" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="45" namespace="global" package="Default">
+        <name>$password</name>
+        <default><![CDATA[]]></default>
+        <docblock line="40">
+          <description><![CDATA[password of database for use of pdo]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="40" name="access" description="private"/>
+          <tag line="40" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="62" package="Default">
+        <name>avaaz_mysql_db</name>
+        <full_name>avaaz_mysql_db</full_name>
+        <docblock line="48">
+          <description><![CDATA[avaaz_mysql_db($tmp_connection_string,$tmp_user_name,$tmp_password)]]></description>
+          <long-description><![CDATA[<p>This constructor initalizes the connection string, username and password variables</p>]]></long-description>
+          <tag line="48" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="48" name="since" description="1.0"/>
+          <tag line="48" name="param" description="the connection string for use with pdo" type="string" variable="$tmp_connection_string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="48" name="param" description="username to the database" type="string" variable="$tmp_user_name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="48" name="param" description="password to the database" type="string" variable="$tmp_password">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="62">
+          <name>$tmp_connection_string</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="62">
+          <name>$tmp_user_name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="62">
+          <name>$tmp_password</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="82" package="Default">
+        <name>add_person</name>
+        <full_name>add_person</full_name>
+        <docblock line="69">
+          <description><![CDATA[add_person($person)]]></description>
+          <long-description><![CDATA[<p>Adds a person to the database.
+Throws an exception if a perosn with the same name or email exists</p>]]></long-description>
+          <tag line="69" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="69" name="since" description="1.0"/>
+          <tag line="69" name="param" description="object of the person class" type="\person" variable="$person">
+            <type by_reference="false">\person</type>
+          </tag>
+        </docblock>
+        <argument line="82">
+          <name>$person</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="145" package="Default">
+        <name>edit_person</name>
+        <full_name>edit_person</full_name>
+        <docblock line="132">
+          <description><![CDATA[edit_person($person)]]></description>
+          <long-description><![CDATA[<p>Edits a person's details in the database.
+Throws an exception if a perosn with the same name or email exists</p>]]></long-description>
+          <tag line="132" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="132" name="since" description="1.0"/>
+          <tag line="132" name="param" description="object of the person class" type="\person" variable="$person">
+            <type by_reference="false">\person</type>
+          </tag>
+        </docblock>
+        <argument line="145">
+          <name>$person</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="211" package="Default">
+        <name>delete_person</name>
+        <full_name>delete_person</full_name>
+        <docblock line="199">
+          <description><![CDATA[delete_person($person)]]></description>
+          <long-description><![CDATA[<p>Deletes a person from the database by his/her database id.</p>]]></long-description>
+          <tag line="199" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="199" name="since" description="1.0"/>
+          <tag line="199" name="param" description="object of the person class" type="\person" variable="$person">
+            <type by_reference="false">\person</type>
+          </tag>
+        </docblock>
+        <argument line="211">
+          <name>$person</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="246" package="Default">
+        <name>get_persons</name>
+        <full_name>get_persons</full_name>
+        <docblock line="229">
+          <description><![CDATA[get_persons($limit = 10, $offset = 0,  $sort='first_name', $sort_type = 'asc')]]></description>
+          <long-description><![CDATA[<p>Get people from the database. Throws an exception if the row limit is too high or if
+the sort field specified is not listed and if the sort order type is incorect</p>]]></long-description>
+          <tag line="229" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="229" name="since" description="1.0"/>
+          <tag line="229" name="param" description="limit the number of records returned" type="integer" variable="$limit">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="229" name="param" description="offset when fetching the records" type="integer" variable="$offset">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="229" name="param" description="specifies the column to which to sort by" type="string" variable="$sort">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="229" name="param" description="specifies the sort order 'asc' or 'desc'" type="string" variable="$sort_type">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="229" name="return" description="$rows array of persons which their details" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="246">
+          <name>$limit</name>
+          <default><![CDATA[10]]></default>
+          <type/>
+        </argument>
+        <argument line="246">
+          <name>$offset</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+        <argument line="246">
+          <name>$sort</name>
+          <default><![CDATA['first_name']]></default>
+          <type/>
+        </argument>
+        <argument line="246">
+          <name>$sort_type</name>
+          <default><![CDATA['asc']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="291" package="Default">
+        <name>does_same_name_exist</name>
+        <full_name>does_same_name_exist</full_name>
+        <docblock line="278">
+          <description><![CDATA[does_same_name_exist($person)]]></description>
+          <long-description><![CDATA[<p>Check if see of a person with the same first name and last name already exists in the database</p>]]></long-description>
+          <tag line="278" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="278" name="since" description="1.0"/>
+          <tag line="278" name="param" description="object of the person class" type="\person" variable="$person">
+            <type by_reference="false">\person</type>
+          </tag>
+          <tag line="278" name="return" description="$boolean true if person with the same first and last name already exists else false" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="291">
+          <name>$person</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="350" package="Default">
+        <name>does_email_exist</name>
+        <full_name>does_email_exist</full_name>
+        <docblock line="337">
+          <description><![CDATA[does_email_exist($person)]]></description>
+          <long-description><![CDATA[<p>Check if see of a person with the same email already exists in database</p>]]></long-description>
+          <tag line="337" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="337" name="since" description="1.0"/>
+          <tag line="337" name="param" description="object of the person class" type="\person" variable="$person">
+            <type by_reference="false">\person</type>
+          </tag>
+          <tag line="337" name="return" description="$boolean true if person with the same email already exists in database" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="350">
+          <name>$person</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="401" package="Default">
+        <name>get_person</name>
+        <full_name>get_person</full_name>
+        <docblock line="388">
+          <description><![CDATA[get_person($id)]]></description>
+          <long-description><![CDATA[<p>Get details of a person based on his database id</p>]]></long-description>
+          <tag line="388" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="388" name="since" description="1.0"/>
+          <tag line="388" name="param" description="id of the person in the database" type="integer" variable="$id">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="388" name="return" description="$row array of the details of the person" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="401">
+          <name>$id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file classes/avaaz_mysql_db.php</error>
+    </parse_markers>
+  </file>
+  <file path="classes/encryption.php" hash="574891ce27d2d809f648fb379099de79" package="Default">
+    <docblock line="2">
+      <description><![CDATA[encryption.php]]></description>
+      <long-description><![CDATA[]]></long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="20" package="Default">
+      <extends/>
+      <name>encryption</name>
+      <full_name>\encryption</full_name>
+      <docblock line="6">
+        <description><![CDATA[person]]></description>
+        <long-description><![CDATA[<p>This class is an external class used for encryption purposes</p>]]></long-description>
+        <tag line="6" name="todo" description="the encryption key $skey needs to be moved out into the config file"/>
+        <tag line="6" name="author" description="somebody else"/>
+        <tag line="6" name="since" description="1.0"/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="22" namespace="global" package="Default">
+        <name>$skey</name>
+        <default><![CDATA["eatmychocolatecookie"]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="24" package="Default">
+        <name>safe_b64encode</name>
+        <full_name>safe_b64encode</full_name>
+        <argument line="24">
+          <name>$string</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="30" package="Default">
+        <name>safe_b64decode</name>
+        <full_name>safe_b64decode</full_name>
+        <argument line="30">
+          <name>$string</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="39" package="Default">
+        <name>encode</name>
+        <full_name>encode</full_name>
+        <argument line="39">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="48" package="Default">
+        <name>decode</name>
+        <full_name>decode</full_name>
+        <argument line="48">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="22" code="50018">No DocBlock was found for property $skey</error>
+      <error line="24" code="50010">No DocBlock was found for method safe_b64encode()</error>
+      <error line="30" code="50010">No DocBlock was found for method safe_b64decode()</error>
+      <error line="39" code="50010">No DocBlock was found for method encode()</error>
+      <error line="48" code="50010">No DocBlock was found for method decode()</error>
+    </parse_markers>
+  </file>
+  <file path="classes/person.php" hash="0aec381c9d9eb2185270eca20adfabb9" package="Default">
+    <docblock line="2">
+      <description><![CDATA[person.php]]></description>
+      <long-description><![CDATA[]]></long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="21" package="Default">
+      <extends/>
+      <name>person</name>
+      <full_name>\person</full_name>
+      <docblock line="6">
+        <description><![CDATA[person]]></description>
+        <long-description><![CDATA[<p>This class represents a person.</p>]]></long-description>
+        <tag line="6" name="todo" description="is_only_letters_and_spaces() funciton can be moved to seprate helper class"/>
+        <tag line="6" name="todo" description="is_valid_email() funciton can be moved to seprate helper class"/>
+        <tag line="6" name="author" description="Imran Bukhsh &lt;imranomar@gmail.com&gt;"/>
+        <tag line="6" name="since" description="1.0"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="28" namespace="global" package="Default">
+        <name>$id</name>
+        <default><![CDATA[]]></default>
+        <docblock line="23">
+          <description><![CDATA[used to store the id ( mysql id coulumn ) of the person]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="23" name="access" description="private"/>
+          <tag line="23" name="var" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="34" namespace="global" package="Default">
+        <name>$first_name</name>
+        <default><![CDATA[]]></default>
+        <docblock line="29">
+          <description><![CDATA[used to store the first name ( first_name coulumn ) of the person]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="29" name="access" description="private"/>
+          <tag line="29" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="40" namespace="global" package="Default">
+        <name>$last_name</name>
+        <default><![CDATA[]]></default>
+        <docblock line="35">
+          <description><![CDATA[used to store the last name ( last_name column ) of the person]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="35" name="access" description="private"/>
+          <tag line="35" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="46" namespace="global" package="Default">
+        <name>$country</name>
+        <default><![CDATA[]]></default>
+        <docblock line="41">
+          <description><![CDATA[used to store the country( country columns ) of the person]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="41" name="access" description="private"/>
+          <tag line="41" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="52" namespace="global" package="Default">
+        <name>$city</name>
+        <default><![CDATA[]]></default>
+        <docblock line="47">
+          <description><![CDATA[used to store the city( city column ) of the person]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="47" name="access" description="private"/>
+          <tag line="47" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="58" namespace="global" package="Default">
+        <name>$address</name>
+        <default><![CDATA[]]></default>
+        <docblock line="53">
+          <description><![CDATA[used to store the address ( address column ) of the person]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="53" name="access" description="private"/>
+          <tag line="53" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="64" namespace="global" package="Default">
+        <name>$email</name>
+        <default><![CDATA[]]></default>
+        <docblock line="59">
+          <description><![CDATA[used to store the address ( city column ) of the person]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="59" name="access" description="private"/>
+          <tag line="59" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="84" package="Default">
+        <name>set_id</name>
+        <full_name>set_id</full_name>
+        <docblock line="71">
+          <description><![CDATA[set_id($tmp_id)]]></description>
+          <long-description><![CDATA[<p>This function sets the id of the person
+Throws an exception if the passed value is '' or 0</p>]]></long-description>
+          <tag line="71" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="71" name="since" description="1.0"/>
+          <tag line="71" name="param" description="the unique id based on the id column of the mysql table of the person" type="int" variable="$tmp_id">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="84">
+          <name>$tmp_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="110" package="Default">
+        <name>get_id</name>
+        <full_name>get_id</full_name>
+        <docblock line="98">
+          <description><![CDATA[get_id()]]></description>
+          <long-description><![CDATA[<p>This function returns the id of the person</p>]]></long-description>
+          <tag line="98" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="98" name="since" description="1.0"/>
+          <tag line="98" name="return" description="$this-&gt;id The id of the person" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="129" package="Default">
+        <name>set_first_name</name>
+        <full_name>set_first_name</full_name>
+        <docblock line="115">
+          <description><![CDATA[set_first_name($tmp_first_name)]]></description>
+          <long-description><![CDATA[<p>This function sets the first name of the person.
+Throws an exception if the passed variable is not set or is '' or
+if it contains anything else besides letters and spaces</p>]]></long-description>
+          <tag line="115" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="115" name="since" description="1.0"/>
+          <tag line="115" name="param" description="the first name of the person" type="string" variable="$tmp_first_name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="129">
+          <name>$tmp_first_name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="165" package="Default">
+        <name>set_last_name</name>
+        <full_name>set_last_name</full_name>
+        <docblock line="151">
+          <description><![CDATA[set_first_name($tmp_last_name)]]></description>
+          <long-description><![CDATA[<p>This function sets the last name of the person.
+Throws an exception if the passed variable is not set or is '' or
+if it contains anything else besides letters and spaces</p>]]></long-description>
+          <tag line="151" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="151" name="since" description="1.0"/>
+          <tag line="151" name="param" description="the last name of the person" type="string" variable="$tmp_last_name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="165">
+          <name>$tmp_last_name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="199" package="Default">
+        <name>set_country</name>
+        <full_name>set_country</full_name>
+        <docblock line="185">
+          <description><![CDATA[set_country($tmp_country)]]></description>
+          <long-description><![CDATA[<p>This function sets the country of the person.
+Throws an exception if the passed variable is not set or is '' or
+if it contains anything else besides letters and spaces</p>]]></long-description>
+          <tag line="185" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="185" name="since" description="1.0"/>
+          <tag line="185" name="param" description="the country of the person" type="string" variable="$tmp_country">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="199">
+          <name>$tmp_country</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="233" package="Default">
+        <name>set_city</name>
+        <full_name>set_city</full_name>
+        <docblock line="219">
+          <description><![CDATA[set_city($tmp_city)]]></description>
+          <long-description><![CDATA[<p>This function sets the city of the person.
+Throws an exception if the passed variable is not set or is '' or
+if it contains anything else besides letters and spaces</p>]]></long-description>
+          <tag line="219" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="219" name="since" description="1.0"/>
+          <tag line="219" name="param" description="the city of the person" type="string" variable="$tmp_city">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="233">
+          <name>$tmp_city</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="268" package="Default">
+        <name>set_address</name>
+        <full_name>set_address</full_name>
+        <docblock line="254">
+          <description><![CDATA[set_address($tmp_address)]]></description>
+          <long-description><![CDATA[<p>This function sets the address of the person.
+Throws an exception if the passed variable is not set or is '' or
+if it contains anything else besides letters and spaces</p>]]></long-description>
+          <tag line="254" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="254" name="since" description="1.0"/>
+          <tag line="254" name="param" description="the address of the person" type="string" variable="$tmp_address">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="268">
+          <name>$tmp_address</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="297" package="Default">
+        <name>set_email</name>
+        <full_name>set_email</full_name>
+        <docblock line="283">
+          <description><![CDATA[set_email($tmp_email)]]></description>
+          <long-description><![CDATA[<p>This function sets the email of the person.
+Throws an exception if the passed variable is not set or is '' or
+if it is not a correct email</p>]]></long-description>
+          <tag line="283" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="283" name="since" description="1.0"/>
+          <tag line="283" name="param" description="the email of the person" type="string" variable="$tmp_email">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="297">
+          <name>$tmp_email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="329" package="Default">
+        <name>get_first_name</name>
+        <full_name>get_first_name</full_name>
+        <docblock line="317">
+          <description><![CDATA[get_first_name()]]></description>
+          <long-description><![CDATA[<p>This function returns the first name of the person</p>]]></long-description>
+          <tag line="317" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="317" name="since" description="1.0"/>
+          <tag line="317" name="return" description="$this-&gt;first_name The first name of the person" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="346" package="Default">
+        <name>get_last_name</name>
+        <full_name>get_last_name</full_name>
+        <docblock line="334">
+          <description><![CDATA[get_last_name()]]></description>
+          <long-description><![CDATA[<p>This function returns the last name of the person</p>]]></long-description>
+          <tag line="334" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="334" name="since" description="1.0"/>
+          <tag line="334" name="return" description="$this-&gt;last_name The last name of the person" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="363" package="Default">
+        <name>get_country</name>
+        <full_name>get_country</full_name>
+        <docblock line="351">
+          <description><![CDATA[get_country()]]></description>
+          <long-description><![CDATA[<p>This function returns the country of the person</p>]]></long-description>
+          <tag line="351" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="351" name="since" description="1.0"/>
+          <tag line="351" name="return" description="$this-&gt;country The country of the person" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="380" package="Default">
+        <name>get_city</name>
+        <full_name>get_city</full_name>
+        <docblock line="368">
+          <description><![CDATA[get_city()]]></description>
+          <long-description><![CDATA[<p>This function returns the city of the person</p>]]></long-description>
+          <tag line="368" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="368" name="since" description="1.0"/>
+          <tag line="368" name="return" description="$this-&gt;city The city of the person" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="397" package="Default">
+        <name>get_address</name>
+        <full_name>get_address</full_name>
+        <docblock line="385">
+          <description><![CDATA[get_address()]]></description>
+          <long-description><![CDATA[<p>This function returns the address of the person</p>]]></long-description>
+          <tag line="385" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="385" name="since" description="1.0"/>
+          <tag line="385" name="return" description="$this-&gt;address The address of the person" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="414" package="Default">
+        <name>get_email</name>
+        <full_name>get_email</full_name>
+        <docblock line="402">
+          <description><![CDATA[get_email()]]></description>
+          <long-description><![CDATA[<p>This function returns the email of the person</p>]]></long-description>
+          <tag line="402" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="402" name="since" description="1.0"/>
+          <tag line="402" name="return" description="$this-&gt;email The email of the person" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="433" package="Default">
+        <name>is_only_letters_and_spaces</name>
+        <full_name>is_only_letters_and_spaces</full_name>
+        <docblock line="419">
+          <description><![CDATA[is_only_letters_and_spaces($string)]]></description>
+          <long-description><![CDATA[<p>This function check if the passed string contains only letter and spaces</p>]]></long-description>
+          <tag line="419" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="419" name="since" description="1.0"/>
+          <tag line="419" name="param" description="to be tested for if it contains spaces and letters" type="string" variable="$string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="419" name="return" description="$boolean true if the passed string contains only letter and spaces else false" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="433">
+          <name>$string</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="452" package="Default">
+        <name>is_valid_email</name>
+        <full_name>is_valid_email</full_name>
+        <docblock line="438">
+          <description><![CDATA[is_valid_email($email)]]></description>
+          <long-description><![CDATA[<p>This function checks if the passed string is a valid email address.</p>]]></long-description>
+          <tag line="438" name="author" description="Imran Omar Bukhsh &lt;imranomar@gmail.com&gt;"/>
+          <tag line="438" name="since" description="1.0"/>
+          <tag line="438" name="param" description="string to be tested for email address" type="string" variable="$email">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="438" name="return" description="$boolean true if the passed string is a valid email address else false" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="452">
+          <name>$email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="scripts/get_person.php" hash="2d915d3080599e98075044d51cd169d2" package="Default">
+    <docblock line="2">
+      <description><![CDATA[getperson.php]]></description>
+      <long-description><![CDATA[]]></long-description>
+    </docblock>
+    <include line="21" type="Include" package="Default">
+      <name>../classes/person.php</name>
+      <docblock line="6">
+        <description><![CDATA[person]]></description>
+        <long-description><![CDATA[<p>This scripts returns the details of person based on the id of the person in the based. Data is echo'ed in json</p>]]></long-description>
+        <tag line="6" name="author" description="Imran Bukhsh &lt;imranomar@gmail.com&gt;"/>
+        <tag line="6" name="since" description="1.0"/>
+        <tag line="6" name="param" description="the unique encypted id based on the id column of the mysql table of the person" type="int" variable="$_POST['id']">
+          <type by_reference="false">int</type>
+        </tag>
+        <tag line="6" name="return" description="array details of the person" type="\json">
+          <type by_reference="false">\json</type>
+        </tag>
+      </docblock>
+    </include>
+    <include line="22" type="Include" package="Default">
+      <name>../classes/avaaz_mysql_db.php</name>
+    </include>
+    <include line="23" type="Include" package="Default">
+      <name>../classes/encryption.php</name>
+    </include>
+    <include line="24" type="Include" package="Default">
+      <name>../config.php</name>
+    </include>
+  </file>
+  <file path="scripts/person_script.php" hash="c2cf5514f82481d196e5a0b46151653d" package="Default">
+    <docblock line="2">
+      <description><![CDATA[person_.php]]></description>
+      <long-description><![CDATA[]]></long-description>
+    </docblock>
+    <include line="25" type="Include" package="Default">
+      <name>../classes/person.php</name>
+      <docblock line="6">
+        <description><![CDATA[person]]></description>
+        <long-description><![CDATA[<p>This scripts is responsible for the add/mod/del of the person. Written to be called by ajax.</p>]]></long-description>
+        <tag line="6" name="author" description="Imran Bukhsh &lt;imranomar@gmail.com&gt;"/>
+        <tag line="6" name="since" description="1.0"/>
+        <tag line="6" name="param" description="what needs to be done: 'add' or 'mod' or 'del'" type="int" variable="$_POST['todo']">
+          <type by_reference="false">int</type>
+        </tag>
+        <tag line="6" name="param" description="the unique encypted id based on the id column of the mysql table of the person." type="int" variable="$_POST['id']">
+          <type by_reference="false">int</type>
+        </tag>
+        <tag line="6" name="param" description="the first name of the person" type="int" variable="$_POST['first_name']">
+          <type by_reference="false">int</type>
+        </tag>
+        <tag line="6" name="param" description="the last name of the person" type="int" variable="$_POST['last_name']">
+          <type by_reference="false">int</type>
+        </tag>
+        <tag line="6" name="param" description="the country of the person" type="int" variable="$_POST['country']">
+          <type by_reference="false">int</type>
+        </tag>
+        <tag line="6" name="param" description="the city of the person" type="int" variable="$_POST['city']">
+          <type by_reference="false">int</type>
+        </tag>
+        <tag line="6" name="param" description="the address of the person" type="int" variable="$_POST['address']">
+          <type by_reference="false">int</type>
+        </tag>
+        <tag line="6" name="param" description="the email of the person" type="int" variable="$_POST['email']">
+          <type by_reference="false">int</type>
+        </tag>
+      </docblock>
+    </include>
+    <include line="26" type="Include" package="Default">
+      <name>../classes/encryption.php</name>
+    </include>
+    <include line="27" type="Include" package="Default">
+      <name>../config.php</name>
+    </include>
+    <include line="28" type="Include" package="Default">
+      <name>../classes/avaaz_mysql_db.php</name>
+    </include>
+  </file>
+  <file path="index.php" hash="6e57ae9a72b74793505129bef9760824" package="Default">
+    <include line="25" type="Require Once" package="Default">
+      <name>classes/avaaz_mysql_db.php</name>
+    </include>
+    <include line="26" type="Require Once" package="Default">
+      <name>classes/encryption.php</name>
+    </include>
+    <include line="27" type="Require Once" package="Default">
+      <name>config.php</name>
+    </include>
+    <function namespace="global" line="67" package="Default">
+      <name>encode</name>
+      <full_name>\encode</full_name>
+      <argument line="67">
+        <name>$val</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file index.php</error>
+      <error line="67" code="50009">No DocBlock was found for function \encode()</error>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <namespace name="global" full_name="global"/>
+  <marker count="3">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>

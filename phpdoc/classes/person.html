@@ -1,0 +1,579 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \person</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu"></ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">9</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">3</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#get_address" title="get_address :: get_address()"><span class="description">get_address()</span><pre>get_address()</pre></a></li>
+<li class="method public "><a href="#get_city" title="get_city :: get_city()"><span class="description">get_city()</span><pre>get_city()</pre></a></li>
+<li class="method public "><a href="#get_country" title="get_country :: get_country()"><span class="description">get_country()</span><pre>get_country()</pre></a></li>
+<li class="method public "><a href="#get_email" title="get_email :: get_email()"><span class="description">get_email()</span><pre>get_email()</pre></a></li>
+<li class="method public "><a href="#get_first_name" title="get_first_name :: get_first_name()"><span class="description">get_first_name()</span><pre>get_first_name()</pre></a></li>
+<li class="method public "><a href="#get_id" title="get_id :: get_id()"><span class="description">get_id()</span><pre>get_id()</pre></a></li>
+<li class="method public "><a href="#get_last_name" title="get_last_name :: get_last_name()"><span class="description">get_last_name()</span><pre>get_last_name()</pre></a></li>
+<li class="method public "><a href="#is_only_letters_and_spaces" title="is_only_letters_and_spaces :: is_only_letters_and_spaces($string)"><span class="description">is_only_letters_and_spaces($string)</span><pre>is_only_letters_and_spaces()</pre></a></li>
+<li class="method public "><a href="#is_valid_email" title="is_valid_email :: is_valid_email($email)"><span class="description">is_valid_email($email)</span><pre>is_valid_email()</pre></a></li>
+<li class="method public "><a href="#set_address" title="set_address :: set_address($tmp_address)"><span class="description">set_address($tmp_address)</span><pre>set_address()</pre></a></li>
+<li class="method public "><a href="#set_city" title="set_city :: set_city($tmp_city)"><span class="description">set_city($tmp_city)</span><pre>set_city()</pre></a></li>
+<li class="method public "><a href="#set_country" title="set_country :: set_country($tmp_country)"><span class="description">set_country($tmp_country)</span><pre>set_country()</pre></a></li>
+<li class="method public "><a href="#set_email" title="set_email :: set_email($tmp_email)"><span class="description">set_email($tmp_email)</span><pre>set_email()</pre></a></li>
+<li class="method public "><a href="#set_first_name" title="set_first_name :: set_first_name($tmp_first_name)"><span class="description">set_first_name($tmp_first_name)</span><pre>set_first_name()</pre></a></li>
+<li class="method public "><a href="#set_id" title="set_id :: set_id($tmp_id)"><span class="description">set_id($tmp_id)</span><pre>set_id()</pre></a></li>
+<li class="method public "><a href="#set_last_name" title="set_last_name :: set_first_name($tmp_last_name)"><span class="description">set_first_name($tmp_last_name)</span><pre>set_last_name()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header private">» Private</li>
+<li class="property private "><a href="#%24address" title="$address :: used to store the address ( address column ) of the person"><span class="description">used to store the address ( address column ) of the person</span><pre>$address</pre></a></li>
+<li class="property private "><a href="#%24city" title="$city :: used to store the city( city column ) of the person"><span class="description">used to store the city( city column ) of the person</span><pre>$city</pre></a></li>
+<li class="property private "><a href="#%24country" title="$country :: used to store the country( country columns ) of the person"><span class="description">used to store the country( country columns ) of the person</span><pre>$country</pre></a></li>
+<li class="property private "><a href="#%24email" title="$email :: used to store the address ( city column ) of the person"><span class="description">used to store the address ( city column ) of the person</span><pre>$email</pre></a></li>
+<li class="property private "><a href="#%24first_name" title="$first_name :: used to store the first name ( first_name coulumn ) of the person"><span class="description">used to store the first name ( first_name coulumn ) of the person</span><pre>$first_name</pre></a></li>
+<li class="property private "><a href="#%24id" title="$id :: used to store the id ( mysql id coulumn ) of the person"><span class="description">used to store the id ( mysql id coulumn ) of the person</span><pre>$id</pre></a></li>
+<li class="property private "><a href="#%24last_name" title="$last_name :: used to store the last name ( last_name column ) of the person"><span class="description">used to store the last name ( last_name column ) of the person</span><pre>$last_name</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5Cperson" id="\person"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/person.html">person</a>
+</li>
+</ul>
+<div href="../classes/person.html" class="element class">
+<p class="short_description">person</p>
+<div class="details">
+<p class="long_description"><p>This class represents a person.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>todo</th>
+<td>is_only_letters_and_spaces() funciton can be moved to seprate helper class</td>
+</tr>
+<tr>
+<th>todo</th>
+<td>is_valid_email() funciton can be moved to seprate helper class</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="get_address" id="get_address"></a><div class="element clickable method public get_address" data-toggle="collapse" data-target=".get_address .collapse">
+<h2>get_address()</h2>
+<pre>get_address() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function returns the address of the person</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$this->address The address of the person</div>
+</div></div>
+</div>
+<a name="get_city" id="get_city"></a><div class="element clickable method public get_city" data-toggle="collapse" data-target=".get_city .collapse">
+<h2>get_city()</h2>
+<pre>get_city() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function returns the city of the person</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$this->city The city of the person</div>
+</div></div>
+</div>
+<a name="get_country" id="get_country"></a><div class="element clickable method public get_country" data-toggle="collapse" data-target=".get_country .collapse">
+<h2>get_country()</h2>
+<pre>get_country() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function returns the country of the person</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$this->country The country of the person</div>
+</div></div>
+</div>
+<a name="get_email" id="get_email"></a><div class="element clickable method public get_email" data-toggle="collapse" data-target=".get_email .collapse">
+<h2>get_email()</h2>
+<pre>get_email() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function returns the email of the person</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$this->email The email of the person</div>
+</div></div>
+</div>
+<a name="get_first_name" id="get_first_name"></a><div class="element clickable method public get_first_name" data-toggle="collapse" data-target=".get_first_name .collapse">
+<h2>get_first_name()</h2>
+<pre>get_first_name() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function returns the first name of the person</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$this->first_name The first name of the person</div>
+</div></div>
+</div>
+<a name="get_id" id="get_id"></a><div class="element clickable method public get_id" data-toggle="collapse" data-target=".get_id .collapse">
+<h2>get_id()</h2>
+<pre>get_id() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function returns the id of the person</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>$this->id The id of the person</div>
+</div></div>
+</div>
+<a name="get_last_name" id="get_last_name"></a><div class="element clickable method public get_last_name" data-toggle="collapse" data-target=".get_last_name .collapse">
+<h2>get_last_name()</h2>
+<pre>get_last_name() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function returns the last name of the person</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$this->last_name The last name of the person</div>
+</div></div>
+</div>
+<a name="is_only_letters_and_spaces" id="is_only_letters_and_spaces"></a><div class="element clickable method public is_only_letters_and_spaces" data-toggle="collapse" data-target=".is_only_letters_and_spaces .collapse">
+<h2>is_only_letters_and_spaces($string)</h2>
+<pre>is_only_letters_and_spaces(string $string) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function check if the passed string contains only letter and spaces</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code><p>to be tested for if it contains spaces and letters</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>$boolean true if the passed string contains only letter and spaces else false</div>
+</div></div>
+</div>
+<a name="is_valid_email" id="is_valid_email"></a><div class="element clickable method public is_valid_email" data-toggle="collapse" data-target=".is_valid_email .collapse">
+<h2>is_valid_email($email)</h2>
+<pre>is_valid_email(string $email) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function checks if the passed string is a valid email address.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$email</h4>
+<code>string</code><p>string to be tested for email address</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>$boolean true if the passed string is a valid email address else false</div>
+</div></div>
+</div>
+<a name="set_address" id="set_address"></a><div class="element clickable method public set_address" data-toggle="collapse" data-target=".set_address .collapse">
+<h2>set_address($tmp_address)</h2>
+<pre>set_address(string $tmp_address) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function sets the address of the person.
+Throws an exception if the passed variable is not set or is '' or
+if it contains anything else besides letters and spaces</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tmp_address</h4>
+<code>string</code><p>the address of the person</p></div>
+</div></div>
+</div>
+<a name="set_city" id="set_city"></a><div class="element clickable method public set_city" data-toggle="collapse" data-target=".set_city .collapse">
+<h2>set_city($tmp_city)</h2>
+<pre>set_city(string $tmp_city) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function sets the city of the person.
+Throws an exception if the passed variable is not set or is '' or
+if it contains anything else besides letters and spaces</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tmp_city</h4>
+<code>string</code><p>the city of the person</p></div>
+</div></div>
+</div>
+<a name="set_country" id="set_country"></a><div class="element clickable method public set_country" data-toggle="collapse" data-target=".set_country .collapse">
+<h2>set_country($tmp_country)</h2>
+<pre>set_country(string $tmp_country) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function sets the country of the person.
+Throws an exception if the passed variable is not set or is '' or
+if it contains anything else besides letters and spaces</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tmp_country</h4>
+<code>string</code><p>the country of the person</p></div>
+</div></div>
+</div>
+<a name="set_email" id="set_email"></a><div class="element clickable method public set_email" data-toggle="collapse" data-target=".set_email .collapse">
+<h2>set_email($tmp_email)</h2>
+<pre>set_email(string $tmp_email) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function sets the email of the person.
+Throws an exception if the passed variable is not set or is '' or
+if it is not a correct email</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tmp_email</h4>
+<code>string</code><p>the email of the person</p></div>
+</div></div>
+</div>
+<a name="set_first_name" id="set_first_name"></a><div class="element clickable method public set_first_name" data-toggle="collapse" data-target=".set_first_name .collapse">
+<h2>set_first_name($tmp_first_name)</h2>
+<pre>set_first_name(string $tmp_first_name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function sets the first name of the person.
+Throws an exception if the passed variable is not set or is '' or
+if it contains anything else besides letters and spaces</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tmp_first_name</h4>
+<code>string</code><p>the first name of the person</p></div>
+</div></div>
+</div>
+<a name="set_id" id="set_id"></a><div class="element clickable method public set_id" data-toggle="collapse" data-target=".set_id .collapse">
+<h2>set_id($tmp_id)</h2>
+<pre>set_id(int $tmp_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function sets the id of the person
+Throws an exception if the passed value is '' or 0</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tmp_id</h4>
+<code>int</code><p>the unique id based on the id column of the mysql table of the person</p></div>
+</div></div>
+</div>
+<a name="set_last_name" id="set_last_name"></a><div class="element clickable method public set_last_name" data-toggle="collapse" data-target=".set_last_name .collapse">
+<h2>set_first_name($tmp_last_name)</h2>
+<pre>set_last_name(string $tmp_last_name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This function sets the last name of the person.
+Throws an exception if the passed variable is not set or is '' or
+if it contains anything else besides letters and spaces</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:imranomar@gmail.com">Imran Omar Bukhsh</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tmp_last_name</h4>
+<code>string</code><p>the last name of the person</p></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24address" id="$address"> </a><div class="element clickable property private $address" data-toggle="collapse" data-target=".$address .collapse">
+<h2>used to store the address ( address column ) of the person</h2>
+<pre>$address : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24city" id="$city"> </a><div class="element clickable property private $city" data-toggle="collapse" data-target=".$city .collapse">
+<h2>used to store the city( city column ) of the person</h2>
+<pre>$city : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24country" id="$country"> </a><div class="element clickable property private $country" data-toggle="collapse" data-target=".$country .collapse">
+<h2>used to store the country( country columns ) of the person</h2>
+<pre>$country : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24email" id="$email"> </a><div class="element clickable property private $email" data-toggle="collapse" data-target=".$email .collapse">
+<h2>used to store the address ( city column ) of the person</h2>
+<pre>$email : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24first_name" id="$first_name"> </a><div class="element clickable property private $first_name" data-toggle="collapse" data-target=".$first_name .collapse">
+<h2>used to store the first name ( first_name coulumn ) of the person</h2>
+<pre>$first_name : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24id" id="$id"> </a><div class="element clickable property private $id" data-toggle="collapse" data-target=".$id .collapse">
+<h2>used to store the id ( mysql id coulumn ) of the person</h2>
+<pre>$id : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24last_name" id="$last_name"> </a><div class="element clickable property private $last_name" data-toggle="collapse" data-target=".$last_name .collapse">
+<h2>used to store the last name ( last_name column ) of the person</h2>
+<pre>$last_name : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-09-09T10:26:05+04:00.<br></footer></div>
+</div>
+</body>
+</html>
